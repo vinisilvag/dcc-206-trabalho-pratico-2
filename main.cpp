@@ -12,7 +12,7 @@ using namespace std;
 #define pb push_back
 
 // Valor máximo da capacidade que foi informado no enunciado
-#define INF 100000
+#define INF 1000000
 
 // Algoritmo de Dijkstra modificado para se comportar ao problema do caminho com maior banda
 int maximum_bandwith_dijkstra(int n, vector<vector<pair<int, int>>> &graph, pair<int, int> path);
@@ -53,9 +53,9 @@ int main() { _
             Chama a função que computa o gargalo passando o número de vértices, o grafo e o
             par {fonte, destino} para o qual o gargalo vai ser computado
         */
-        int bottleneck = maximum_bandwith_dijkstra(n, graph, queries[i]);
+        int max_bandwith = maximum_bandwith_dijkstra(n, graph, queries[i]);
 
-        cout << bottleneck << endl;
+        cout << max_bandwith << endl;
     }
 
     return 0;
